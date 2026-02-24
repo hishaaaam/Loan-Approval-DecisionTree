@@ -1,34 +1,23 @@
----
+# 💳 AI Loan Approval System (Decision Tree)
 
-title: Loan Approval using Decision Tree
-emoji: 💳
-colorFrom: indigo
-colorTo: cyan
-sdk: gradio
-sdk_version: "4.0"
-app_file: app.py
-pinned: false
--------------
+🔗 **Live Demo (Hugging Face Space):**
+https://huggingface.co/spaces/hishaaaam/Loan-Approval-usingTree
 
-# 💳 AI Loan Approval System
-
-🔗 **Live App:** https://huggingface.co/spaces/hishaaaam/Loan-Approval-usingTree
-
-An intelligent machine learning application that predicts whether a loan application should be **Approved or Rejected** using a **Decision Tree Classifier**. The system provides real-time predictions through an interactive Gradio interface.
+An end-to-end machine learning application that predicts whether a loan application should be **Approved or Rejected** using a **Decision Tree Classifier**. The system features a modern Gradio interface for real-time user interaction and is designed to be lightweight, fast, and deployable.
 
 ---
 
 ## 🚀 Overview
 
-This project demonstrates an end-to-end ML deployment pipeline:
+This project demonstrates a complete ML deployment pipeline:
 
-* 🌳 Decision Tree model for classification
+* 🌳 Decision Tree classification model
 * 🧠 Financial risk assessment logic
 * 🎨 Professional Gradio UI
 * ⚡ Real-time predictions
-* ☁️ Deployed on Hugging Face Spaces
+* ☁️ Hugging Face Spaces deployment
 
-The model analyzes applicant financial attributes and outputs an automated credit decision with confidence score.
+The model analyzes applicant financial attributes and outputs an automated credit decision along with a confidence score.
 
 ---
 
@@ -40,6 +29,7 @@ The model analyzes applicant financial attributes and outputs an automated credi
 * ⚡ Fast inference
 * 🧩 Single-file deployable architecture
 * ☁️ Hugging Face Spaces ready
+* 🛡️ Input validation and error handling
 
 ---
 
@@ -48,7 +38,7 @@ The model analyzes applicant financial attributes and outputs an automated credi
 **Algorithm:** Decision Tree Classifier
 **Problem Type:** Binary Classification
 
-### Input Features
+### 📥 Input Features
 
 * Annual Income
 * Credit Score
@@ -56,7 +46,7 @@ The model analyzes applicant financial attributes and outputs an automated credi
 * Age
 * Employment Years
 
-### Output
+### 📤 Output
 
 * ✅ Approved
 * ❌ Rejected
@@ -69,15 +59,8 @@ The model analyzes applicant financial attributes and outputs an automated credi
 * **Machine Learning:** Scikit-learn
 * **Frontend/UI:** Gradio
 * **Language:** Python
+* **Model Serialization:** Joblib
 * **Deployment:** Hugging Face Spaces
-
----
-
-## ▶️ How to Use
-
-1. Enter applicant financial details
-2. Click **Evaluate Application**
-3. View loan decision and confidence
 
 ---
 
@@ -93,10 +76,91 @@ The model analyzes applicant financial attributes and outputs an automated credi
 
 ---
 
+## ▶️ How to Run Locally
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone <your-repo-url>
+cd <repo-folder>
+```
+
+### 2️⃣ Create virtual environment (recommended)
+
+**Windows**
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+**Mac/Linux**
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Run the application
+
+```bash
+python app.py
+```
+
+Then open the local Gradio link shown in the terminal.
+
+---
+
+## ☁️ Deployment (Hugging Face Spaces)
+
+This project is fully compatible with **Gradio Spaces**.
+
+**Steps:**
+
+1. Create a new Space (SDK: Gradio)
+2. Upload:
+
+   * `app.py`
+   * `requirements.txt`
+   * `model/model.pkl`
+3. The Space will automatically build and run.
+
+---
+
+## 🧪 Example Test Cases
+
+### ✅ Expected Approval
+
+```
+Income: 90000  
+Credit Score: 720  
+Loan Amount: 20000  
+Age: 30  
+Employment Years: 5
+```
+
+### ❌ Expected Rejection
+
+```
+Income: 30000  
+Credit Score: 520  
+Loan Amount: 30000  
+Age: 24  
+Employment Years: 0
+```
+
+---
+
 ## ⚠️ Disclaimer
 
 This project is for **educational and demonstration purposes only**.
-It should not be used as a real financial approval system.
+It should **not** be used as a real financial approval system.
 
 ---
 
@@ -104,6 +168,4 @@ It should not be used as a real financial approval system.
 
 **Hisham Hidayathulla**
 
-If you found this useful, consider giving the Space a ⭐
-
----
+If you found this project useful, consider giving it a ⭐ on GitHub!
